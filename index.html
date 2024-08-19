@@ -14,6 +14,97 @@
         <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <style>
+            /* 모달 기본 스타일 */
+            .modal {
+                display: none; /* 기본적으로 숨김 */
+                position: fixed;
+                z-index: 1;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgba(0, 0, 0, 0.7); /* 어두운 배경 */
+            }
+    
+            /* 모달 내부 컨텐츠 */
+            .modal-content {
+                background-color: #fefefe;
+                margin: 5% 25%;
+                padding: 20px;
+                border: 1px solid #888;
+                width: 73%;
+                max-height: 80%;
+                overflow-y: scroll;
+            }
+    
+            /* 이미지 스타일 */
+            .modal-content img {
+                display: block;
+                width: 100%;
+                margin-bottom: 10px;
+            }
+    
+            /* 닫기 버튼 스타일 */
+            .close, .close2, .close3 {
+                color: #aaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+            }
+    
+            .close:hover,
+            .close:focus,
+            .close2:hover,
+            .close2:focus,
+            .close3:hover,
+            .close3:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }
+    
+            /* 아이콘 스타일 */
+            .icon, .project-github {
+                font-size: 20px;
+                cursor: pointer;
+            }
+
+            summary:hover {
+                color: rgb(138 157 223);
+            }
+
+    
+            /* 반응형 디자인 미디어 쿼리 */
+            /* 화면이 768px 이하일 때 모달의 크기 조정 */
+            @media screen and (max-width: 768px) {
+                .modal-content {
+                    width: 90%;
+                    padding: 10px;
+                    margin: 15% auto;
+                }
+            }
+    
+            /* 화면이 480px 이하일 때 모달의 크기 조정 */
+            @media screen and (max-width: 480px) {
+                .modal-content {
+                    width: 95%;
+                    padding: 5px;
+                    margin: 15% auto;
+                }
+    
+                /* 작은 화면에서 닫기 버튼 크기 조정 */
+                .close, .close2, .close3 {
+                    font-size: 24px;
+                }
+    
+                /* 작은 화면에서 이미지 크기 조정 */
+                .modal-content img {
+                    margin-bottom: 5px;
+                }
+            }
+        </style>
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -63,42 +154,46 @@
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">트렌베리</h3>
-                            <div class="subheading mb-3">웹 개발 부서 - 웹퍼블리싱 인턴</div>
-                            <p>1) 프로젝트명: 트렌베리 사이트 리뉴얼<br /><br />
-
-                                - 연계/소속회사 : (주) 트렌베리<br />
-                                - 수행 기간 : 2022.12 ~ 2023.02 (약 3개월)<br />
-                                - 주요 역할 : 서브 페이지 제작, 유지 보수<br />
-                                - 사이트 : <a href="https://trenvery.com">https://trenvery.com</a><br /><br />
+                            <details>
+                                <summary class="subheading">웹 개발 부서 - 웹퍼블리싱 인턴</summary>
+                                <p><br />1) 프로젝트명: 트렌베리 사이트 리뉴얼<br /><br />
+    
+                                    - 연계/소속회사 : (주) 트렌베리<br />
+                                    - 수행 기간 : 2022.12 ~ 2023.02 (약 3개월)<br />
+                                    - 주요 역할 : 서브 페이지 제작, 유지 보수<br />
+                                    - 사이트 : <a href="https://trenvery.com">https://trenvery.com</a><br /><br />
+                                    
+                                    2) 프로젝트명 : 이집트 미라전 공식 홈페이지 유지 보수<br /><br />
+                                    
+                                    - 연계/소속회사 : (주) 트렌베리 , ena 파트너스<br />
+                                    - 수행 기간 : 2022.12 ~ 2023.02 (약 3개월)<br />
+                                    - 주요 역할 : 팝업 페이지 제작, 유지 보수<br />
+                                    - 사이트 : <a href="#">현재 호스팅 종료되었습니다.</a><br /><br />
+                                    
+                                    3) 프로젝트명 : 바이럴C 공식 홈페이지 유지 보수<br />
+                                    
+                                    - 연계/소속회사 : (주) 트렌베리<br />
+                                    - 수행 기간 : 2022.12 ~ 2023.02 (약 3개월)<br />
+                                    - 주요 역할 : 반응형 디자인 수정, admin 페이지 추가제작, 유지 보수<br />
+                                    - 사이트 : <a href="https://viralc.co.kr/influence/main.do">https://viralc.co.kr/influence/main.do</a><br /><br />
                                 
-                                2) 프로젝트명 : 이집트 미라전 공식 홈페이지 유지 보수<br /><br />
-                                
-                                - 연계/소속회사 : (주) 트렌베리 , ena 파트너스<br />
-                                - 수행 기간 : 2022.12 ~ 2023.02 (약 3개월)<br />
-                                - 주요 역할 : 팝업 페이지 제작, 유지 보수<br />
-                                - 사이트 : <a href="#">현재 호스팅 종료되었습니다.</a><br /><br />
-                                
-                                3) 프로젝트명 : 바이럴C 공식 홈페이지 유지 보수<br />
-                                
-                                - 연계/소속회사 : (주) 트렌베리<br />
-                                - 수행 기간 : 2022.12 ~ 2023.02 (약 3개월)<br />
-                                - 주요 역할 : 반응형 디자인 수정, admin 페이지 추가제작, 유지 보수<br />
-                                - 사이트 : <a href="https://viralc.co.kr/influence/main.do">https://viralc.co.kr/influence/main.do</a><br /><br />
-                            
-                            </p>
+                                </p>
+                            </details>
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">2022.11 - 2023.02</span></div>
                     </div>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">대원학원</h3>
-                            <div class="subheading mb-3">학원 강사</div>
-                            <p>
-                                [ 주요 역할 및 책임 ]<br/><br/>
-                                - 초중고등학생 수학 지도: 기초부터 고급 문제 해결까지 다양한 수준의 학습 계획을 수립하여 학생들의 성과를 극대화.<br /><br />
-                                - 커리큘럼 개발 및 개선: 학생들의 학습 진도를 고려하여 효과적인 커리큘럼을 설계하고, 최신 교육 자료를 활용하여 수업의 질을 향상.<br /><br />
-                                - 학습 진단 및 피드백: 정기적인 테스트와 평가를 통해 학생들의 강점과 약점을 분석하고, 적절한 학습 피드백을 제공하여 성취도 향상에 기여.
-                            </p>
+                            <details>
+                                <summary class="subheading">학원 강사</summary>
+                                <p><br />
+                                    [ 주요 역할 및 책임 ]<br/><br/>
+                                    1) 초중고등학생 수학 지도: 기초부터 고급 문제 해결까지 다양한 수준의 학습 계획을 수립하여 학생들의 성과를 극대화.<br /><br />
+                                    2) 커리큘럼 개발 및 개선: 학생들의 학습 진도를 고려하여 효과적인 커리큘럼을 설계하고, 최신 교육 자료를 활용하여 수업의 질을 향상.<br /><br />
+                                    3) 학습 진단 및 피드백: 정기적인 테스트와 평가를 통해 학생들의 강점과 약점을 분석하고, 적절한 학습 피드백을 제공하여 성취도 향상에 기여.
+                                </p>
+                            </details>
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">2015.10 - 2019.01</span></div>
                     </div>
@@ -173,12 +268,41 @@
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">챗봇 기반의 맞춤형 여행 서비스 - TripPass </h3>
-                            <div class="subheading mb-2">프로젝트 소개 및 역할</div>
-                            <div>
-                                [ 프로젝트 목적 ]<br/>
-                                챗봇 기술을 활용하여 사용자에게 맞춤형 여행 계획을 제공하고,<br/>
-                                비슷한 여행 계획과 성향을 가진 사용자들을 매칭하여
-                                1인 여행의 경비 감소 및 안전 문제 해결<br/><br/>
+                            <details>
+                                <summary class="subheading mb-2">프로젝트 소개 및 역할</summary>
+                                <div>
+                                    <b>[ 프로젝트 소개 ]</b><br/>
+                                    챗봇 기술을 활용하여 사용자에게 맞춤형 여행 계획을 제공하고,<br/>
+                                    비슷한 여행 계획과 성향을 가진 사용자들을 매칭하여 1인 여행의 경비 감소 및 안전 문제 해결<br/><br/>
+                                    <b>[ 프로젝트 역할 ( 팀장 ) ]</b><br/><br/>
+                                    1. 기획<br/>
+                                    - 프로젝트 기획 및 설계 <br/><br/>
+                                    2. 디자인<br/>
+                                    - 프로젝트 전체 페이지 프론트 총괄<br/><br/>
+                                    3. 개발<br/>
+                                    - 회원가입 및 소셜 로그인 구현<br/>
+                                    - OpenAI 를 이용한 여행지 정보 출력<br/>
+                                    - Redux 를 이용한 프로젝트 상태 관리<br/>
+                                    - Docker, k8s 를 이용한 프로젝트 배포<br/>
+                                    - 상품 최저가 정보 크롤링<br/>
+                                </div>
+                            </details>
+                            <br/>
+                            <div class="social-icons">
+                                <div class="icon social-icon" id="openModal3"><i class="fa-solid fa-file-circle-check"></i></div>
+                                <a class="social-icon" href="https://github.com/songhannaa/TripPass_Main"><i class="fab fa-github"></i></a>
+                            </div>
+                            <!-- 모달 3 -->
+                            <div id="myModal3" class="modal">
+                                <div class="modal-content">
+                                    <span class="close3">&times;</span>
+                                    <img src="./assets/img/trippass/019.png" alt="trippassImage 1">
+                                    <img src="./assets/img/trippass/020.png" alt="trippassImage 2">
+                                    <img src="./assets/img/trippass/021.png" alt="trippassImage 3">
+                                    <img src="./assets/img/trippass/022.png" alt="trippassImage 4">
+                                    <img src="./assets/img/trippass/023.png" alt="trippassImage 5">
+                                    <img src="./assets/img/trippass/024.png" alt="trippassImage 6">
+                                </div>
                             </div>
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">2024.06 - 2024.08</span></div>
@@ -186,12 +310,35 @@
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">네이버 오픈API를 활용한 최저가 찾기 서비스 - FindTheShop</h3>
-                            <div class="subheading mb-2">프로젝트 소개 및 역할</div>
-                            <div>
-                                [ 프로젝트 목적 ]<br/>
-                                네이버 오픈API를 이용하여 사용자가 원하는 상품을 찾고,<br/>
-                                최저가 정보 및 리뷰를 크롤링하여
-                                최저가 상품을 한눈에 확인<br/><br/>
+                            <details>
+                                <summary class="subheading mb-2">프로젝트 소개 및 역할</summary>
+                                <div>
+                                    <b>[ 프로젝트 소개 ]</b><br/>
+                                        네이버 오픈API를 이용하여 사용자가 원하는 상품을 찾고,<br/>
+                                        최저가 정보 및 리뷰를 크롤링하여 최저가 상품을 한눈에 확인합니다.<br/><br/>
+                                    <b>[ 프로젝트 역할 ]</b><br/><br/>
+                                    1. 기획<br/>
+                                    - 프로젝트 기획 및 전체 페이지 와이어 프레임 제작 <br/><br/>
+                                    2. 디자인<br/>
+                                    - 프로젝트 전체 페이지 디자인 구현<br/><br/>
+                                    3. 개발<br/>
+                                    - 네이버 쇼핑 api를 이용한 상품 정보 출력<br/>
+                                    - 상품 정보 json server 업로드<br/>
+                                    - 최근 본 상품 출력 및 삭제 구현<br/>
+                                    - 상품 검색 페이지 UI 제작<br/>
+                                    - 상품 최저가 정보 크롤링<br/>
+                                </div>
+                            </details>
+                            <br/>
+                            <div class="social-icons">
+                                <div class="icon social-icon" id="openModal2"><i class="fa-solid fa-file-circle-check"></i></div>
+                                <a class="social-icon" href="https://github.com/songhannaa/findtheshop"><i class="fab fa-github"></i></a>
+                            </div>
+                            <!-- 모달 2 -->
+                            <div id="myModal2" class="modal">
+                                <div class="modal-content">
+                                    <span class="close2">&times;</span>
+                                </div>
                             </div>
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">2024.06 - 2024.08</span></div>
@@ -199,25 +346,55 @@
                     <div class="d-flex flex-column flex-md-row justify-content-between">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">독서 소모임 플랫폼 - 북메이트</h3>
-                            <div class="subheading mb-2">프로젝트 소개 및 역할</div>
-                            <div>
-                                [ 프로젝트 목적 ]<br/>
-                                현재 유행하고 있는 ‘취미 공유’ 커뮤니티 앱을 ‘독서 모임’이라는 테마로 
-                                웹 어플리케이션을 구현하는 것을 목표로 하였습니다<br/><br/>
-
-                                [ 프로젝트 내 역할 ]<br/>
-                                1. 기획 - 프로젝트 전체 페이지 와이어 프레임 제작 , 디자인 컨셉 구상<br/>
-                                2. 디자인 - 프로젝트 전체 페이지 디자인 구현<br/>
-                                3. 프론트엔드 개발<br/>
-                                - 메인 페이지 UI 구현
-                                - 북메이트 찾기 페이지 인기순, 최신순 기능 개발
-                                - 북메이트 찾기 페이지 카테고리 분류 기능 개발
-                                - 북메이트 찾기 페이지 검색 기능 개발
-                                - 북메이트 찾기 페이지 ajax 처리
-                                - 소모임 개별 디테일 페이지 UI 제작
-                                - 소모임 개별 디테일 페이지 내 문의하기 ajax 처리
-                                - 나의 북메이트 확인 페이지 UI 제작
-                                - 북메이트 커뮤니티 및 게시판 UI 제작
+                            <details>
+                                <summary class="subheading mb-2">프로젝트 소개 및 역할</summary>
+                                <div>
+                                    <b>[ 프로젝트 소개 ]</b><br/>
+                                    현재 유행하고 있는 ‘취미 공유’ 커뮤니티 앱을 ‘독서 모임’이라는 테마로 
+                                    웹 어플리케이션을 구현하는 것을 목표로 하였습니다<br/><br/>
+    
+                                    <b>[ 프로젝트 역할 ]</b><br/><br/>
+                                    1. 기획<br/>
+                                    - 프로젝트 전체 페이지 와이어 프레임 제작 , 디자인 컨셉 구상<br/><br/>
+                                    2. 디자인<br/>
+                                    - 프로젝트 전체 페이지 디자인 구현<br/><br/>
+                                    3. 개발<br/>
+                                    - 메인 페이지 UI 구현<br/>
+                                    - 북메이트 찾기 페이지 인기순, 최신순 기능 개발<br/>
+                                    - 북메이트 찾기 페이지 카테고리 분류 기능 개발<br/>
+                                    - 북메이트 찾기 페이지 검색 기능 개발<br/>
+                                    - 북메이트 찾기 페이지 ajax 처리<br/>
+                                    - 소모임 개별 디테일 페이지 UI 제작<br/>
+                                    - 소모임 개별 디테일 페이지 내 문의하기 ajax 처리<br/>
+                                    - 나의 북메이트 확인 페이지 UI 제작<br/>
+                                    - 북메이트 커뮤니티 및 게시판 UI 제작<br/>
+                                </div>                                
+                            </details>
+                            <br/>
+                            <div class="social-icons">
+                                <div class="icon social-icon" id="openModal"><i class="fa-solid fa-file-circle-check"></i></div>
+                                <a class="social-icon" href="https://github.com/songhannaa/BookMate"><i class="fab fa-github"></i></a>
+                            </div>
+                            <!-- 모달 -->
+                            <div id="myModal" class="modal">
+                                <div class="modal-content">
+                                    <span class="close">&times;</span>
+                                    <img src="./assets/img/bookmate/005.png" alt="bookmateImage 1">
+                                    <img src="./assets/img/bookmate/006.png" alt="bookmateImage 2">
+                                    <img src="./assets/img/bookmate/007.png" alt="bookmateImage 3">
+                                    <img src="./assets/img/bookmate/008.png" alt="bookmateImage 4">
+                                    <img src="./assets/img/bookmate/008.png" alt="bookmateImage 5">
+                                    <img src="./assets/img/bookmate/009.png" alt="bookmateImage 6">
+                                    <img src="./assets/img/bookmate/010.png" alt="bookmateImage 7">
+                                    <img src="./assets/img/bookmate/011.png" alt="bookmateImage 8">
+                                    <img src="./assets/img/bookmate/012.png" alt="bookmateImage 9">
+                                    <img src="./assets/img/bookmate/013.png" alt="bookmateImage 10">
+                                    <img src="./assets/img/bookmate/014.png" alt="bookmateImage 11">
+                                    <img src="./assets/img/bookmate/015.png" alt="bookmateImage 12">
+                                    <img src="./assets/img/bookmate/016.png" alt="bookmateImage 13">
+                                    <img src="./assets/img/bookmate/017.png" alt="bookmateImage 14">
+                                    <img src="./assets/img/bookmate/018.png" alt="bookmateImage 15">
+                                </div>
                             </div>
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">2023.07 - 2023.09
